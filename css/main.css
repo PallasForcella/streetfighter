@@ -57,3 +57,11 @@ body {
   left: 600px;
   float: left;
 }
+
+.text {
+	text-align: center;
+	font-size: 1em;
+	display: inline-block;
+	font-family: Tahoma, Geneva, sans-serif;
+	color:darkred;
+	}
