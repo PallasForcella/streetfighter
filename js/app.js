@@ -4,12 +4,26 @@ function playHadouken () {
   $('#hadouken-sound')[0].load();
   $('#hadouken-sound')[0].play();
 }
+function playnggyu () {
+  $('#nggyu')[0].volume = 0.5;
+  $('#nggyu')[0].load();
+  $('#nggyu')[0].play();
+}
 $(document).keydown(function(e){
     if (e.which == 88){
+    	playnggyu();
         $('.ryu-ready').hide();
         $('.ryu-still').hide();
         $('.ryu-throwing').hide();
         $('.ryu-cool').show();
+    }
+})
+$(document).keyup(function(e){
+    if (e.which == 88){
+        $('.ryu-ready').hide();
+        $('.ryu-still').show();
+        $('.ryu-throwing').hide();
+        $('.ryu-cool').hide();
     }
 });
 $('.ryu').mouseenter(function() {
