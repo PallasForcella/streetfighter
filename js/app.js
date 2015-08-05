@@ -28,5 +28,22 @@ $('.ryu').mouseenter(function() {
 	.mouseup(function(){
 	$('.ryu-throwing').hide();
     $('.ryu-ready').show();
+	})
+	.keydown(function(e){
+		if (e.keyCode == 88){
+			$('.ryu-ready').hide();
+			$('.ryu-still').hide();
+			$('.ryu-throwing').hide();
+			$('.ryu-cool').show();
+		}
+	})
+	.keyup(function(e){
+		if(e.keyCode==88){
+			$('.ryu-ready').hide();
+			$('.ryu-still').show();
+			$('.ryu-throwing').hide();
+			$('.ryu-cool').hide();
+		}
+
 	});
 });
